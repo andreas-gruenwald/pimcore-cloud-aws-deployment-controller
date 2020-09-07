@@ -1,18 +1,21 @@
 <?php
 namespace Pimcore\Cloud\AWS\Deployment\Command;
 
-use Symfony\Component\Console\Command;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class EcsDeploymentCommand extends Command
 {
-    // the name of the command (the part after "bin/console")
-    protected static $defaultName = 'pimcore:cloud:aws:deployment';
+    public function __construct(string $name = null)
+    {
+        parent::__construct(null);
+    }
+
 
     protected function configure()
     {
-        // ...
+        $this->setName('pimcore:cloud:aws:deployment');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
