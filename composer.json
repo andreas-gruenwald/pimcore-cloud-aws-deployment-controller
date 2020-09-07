@@ -1,0 +1,32 @@
+{
+  "name": "andreas-gruenwald/pimcore-cloud-aws-deployment-controller",
+  "description": "A custom deployment process for AWS ECS (fargate) and Pimcore\n\n.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Andreas Grünwald",
+      "email": "andreas.gruenwald@elements.at"
+    }
+  ],
+
+  "require": {
+    "php": "^7.2",
+    "symfony/console": "^3.0 || ^4.0 || ^5.0",
+    "psr/log": "^1.1"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Pimcore\\Cloud\\AWS\\Deployment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pimcore\\Cloud\\AWS\\Deployment\\": "tests/"
+    }
+  },
+
+  "config": {
+    "sort-packages": true
+  }
+}
